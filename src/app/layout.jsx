@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import classNames from './../utils/classNames';
 import Footer from './../components/Footer';
 import StickyNavbar from './../components/Navbar';
+import Providers from './../providers/index';
 
 // const roboto = Roboto({
 //   weight: ['100', '300', '400', '500', '700', '900'],
@@ -24,6 +25,7 @@ const RootLayout = ({children}) => {
         className='container mx-auto px-2 '
         
       >
+        <Providers>
         <div className='flex min-h-screen flex-col justify-between'>
           <div>
             <StickyNavbar/>
@@ -31,6 +33,7 @@ const RootLayout = ({children}) => {
           </div>
           <Footer/>
         </div>
+        </Providers>
       </body>
     </html>
   );
